@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">  
+<topic id="safety_notice">  
+  <title>General Safety Guidelines</title>  
+  <body>  
+    <note type="warning" id="high_voltage_warning">  
+      <p audience="global">  
+        <b>Warning:</b> High-voltage systems can cause severe injury.  
+        Always disconnect power before servicing.  
+      </p>  
+      <p audience="eu" xml:lang="en">Comply with EU Directive 2024/XX for PPE requirements.</p>  
+      <p audience="na" xml:lang="en">Follow ANSI/ISO 9001 safety protocols.</p>  
+    </note>  
+  </body>  
+</topic>  
