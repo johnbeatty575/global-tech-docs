@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">  
+<task id="battery_maint">  
+  <title>Battery System Maintenance</title>  
+  <shortdesc>General procedure for servicing high-voltage battery systems.</shortdesc>  
+  <prolog>  
+    <keywords>  
+      <keyword keyref="safety_standard"/>  
+    </keywords>  
+  </prolog>  
+  <taskbody>  
+    <steps>  
+      <!-- Reuse the safety warning from earlier -->  
+      <step conref="../concepts/safety_notice.dita#safety_notice/high_voltage_warning"/>  
+      
+      <step audience="eu">  
+        <cmd>Use a torque wrench compliant with <keyword keyref="eu_safety_standard"/>.</cmd>  
+      </step>  
+      <step audience="na">  
+        <cmd>Apply sealant rated for <keyword keyref="na_safety_standard"/>.</cmd>  
+      </step>  
+    </steps>  
+  </taskbody>  
+</task>  

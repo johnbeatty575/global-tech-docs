@@ -1,25 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">  
-<reference id="diagnostic_api">  
-  <title>Battery Diagnostic API</title>  
-  <refbody>  
-    <section>  
-      <p>Endpoint to retrieve battery health status:</p>  
-      <codeblock outputclass="json">  
-      {  
-        "endpoint": "/api/v1/battery",  
-        "method": "GET",  
-        "parameters": [  
-          {"name": "vin", "type": "string", "required": true}  
-        ]  
-      }  
-      </codeblock>  
-    </section>  
-    <parml>  
-      <plentry>  
-        <pt>vin</pt>  
-        <pd>Vehicle Identification Number (17-character string).</pd>  
-      </plentry>  
-    </parml>  
-  </refbody>  
-</reference>  
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="diagnostic_api">
+  <title>Battery Diagnostic API</title>  <!-- Required -->
+  <refbody>
+    <!-- ... -->
+  </refbody>
+</reference>

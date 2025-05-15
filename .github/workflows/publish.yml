@@ -29,7 +29,18 @@ jobs:
             --output=out
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: service-manual
           path: out
+          retention-days: 1
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: out/html5
+          publish_branch: gh-pages
+          destination_dir: service-manual
+          keep_files: false
+          force_orphan: true
+          commit_message: "Publish DITA Manual"
