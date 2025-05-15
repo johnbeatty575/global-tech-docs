@@ -1,0 +1,35 @@
+name: Publish DITA Manual
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Install DITA-OT
+        run: |
+          wget https://github.com/dita-ot/dita-ot/releases/download/4.2.1/dita-ot-4.2.1.zip
+          unzip dita-ot-4.2.1.zip
+          rm dita-ot-4.2.1.zip
+
+      - name: Generate outputs
+        run: |
+          ./dita-ot-4.2.1/bin/dita \
+            --input=maps/service_manual.ditamap \
+            --format=html5,pdf \
+            --output=out
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: service-manual
+          path: out

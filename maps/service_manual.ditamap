@@ -5,5 +5,13 @@
   <!-- Include your test topic -->  
   <topicref href="../topics/concepts/test.dita"/>  
   <!-- Include the safety notice -->  
-  <topicref href="../topics/concepts/safety_notice.dita"/>  
+  <topicref href="../topics/concepts/safety_notice.dita"/>
+  <!-- Include the diagnostic API reference -->
+  <topicref href="../topics/references/diagnostic_api.dita">
+    <topicmeta>
+      <keywords>
+        <keyword>Battery</keyword>
+        <keyword>API</keyword>
+      </keywords>
+    </topicmeta>  
 </map>  
