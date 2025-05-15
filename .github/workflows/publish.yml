@@ -45,6 +45,12 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out/html5 # index.html from DITA-OT
-          force_orphan: true       # Clean history on pages branch
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./out/html5
+          # Force-create gh-pages branch if missing
+          force_orphan: true
+          # Allow empty commits (for initial deployment)
+          allow_empty_commit: true
+          # Set user info for commits
+          user_name: "GitHub Actions"
+          user_email: "41898282+github-actions[bot]@users.noreply.github.com"
