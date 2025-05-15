@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="safety_notice">
-  <title>General Safety Guidelines</title>  <!-- Required -->
+  <title>General Safety Guidelines</title>
   <conbody>
-    <!-- ... -->
+    <note type="warning">
+      <p>Always disconnect power before servicing.</p>
+    </note>
   </conbody>
 </concept>

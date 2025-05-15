@@ -2,7 +2,7 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map id="service_manual">
   <title>Global Service Manual</title>
-  <topicref href="../topics/concepts/test.dita"/>  
+  <topicref href="../topics/concepts/test.dita"/>
   <topicref href="../topics/concepts/safety_notice.dita"/>
   <topicref href="../topics/references/diagnostic_api.dita"/>
 </map>
