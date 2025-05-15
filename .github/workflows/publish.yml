@@ -46,4 +46,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out/html5
+          publish_dir: ./out/html5 # index.html from DITA-OT
+          force_orphan: true       # Clean history on pages branch
