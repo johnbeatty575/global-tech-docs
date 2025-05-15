@@ -21,26 +21,22 @@ jobs:
           unzip dita-ot-4.2.1.zip
           rm dita-ot-4.2.1.zip
 
-      - name: Generate outputs
+      - name: Generate HTML5
         run: |
           ./dita-ot-4.2.1/bin/dita \
             --input=maps/service_manual.ditamap \
-            --format=html5,pdf \
-            --output=out
+            --format=html5 \
+            --output=out/html5
+
+      - name: Generate PDF
+        run: |
+          ./dita-ot-4.2.1/bin/dita \
+            --input=maps/service_manual.ditamap \
+            --format=pdf \
+            --output=out/pdf
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: service-manual
-          path: out
-          retention-days: 1
-      - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: out/html5
-          publish_branch: gh-pages
-          destination_dir: service-manual
-          keep_files: false
-          force_orphan: true
-          commit_message: "Publish DITA Manual"
+          path: out/
