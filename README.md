@@ -19,6 +19,8 @@ A DITA-based project demonstrating structured authoring, localization, and autom
 - **HTML Output**: [View Sample](https://johnbeatty575.github.io/global-tech-docs/) (hosted via GitHub Pages)
 - **PDF Output**: [Download Latest Build](./out/pdf/service_manual.pdf)
 
+![Project Screenshot](./docs/projectScreenshot.png)
+
 ## Skills Demonstrated
 - **XML/DITA**: Topic-based authoring, maps, profiling, reuse.
 - **Localization**: Region-aware content via DITA profiling.
