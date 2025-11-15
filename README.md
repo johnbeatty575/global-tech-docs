@@ -3,10 +3,10 @@
 A DITA-based project demonstrating structured authoring, localization, and automated publishing.
 
 ## Features
-- ✅ Topic-based authoring (concepts, tasks, references)
-- 🌐 Localization-ready content
-- 🔄 Content reuse via DITA conrefs and keys
-- 🤖 GitHub Actions automation
+- Topic-based authoring (concepts, tasks, references)
+- Localization-ready content
+- Content reuse via DITA conrefs and keys
+- GitHub Actions automation
 
 ## Setup
 1. Clone this repo.
