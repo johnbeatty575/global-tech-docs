@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="technical_writer_guide">
+  <title>Practical Guide: Working with Software Engineers</title>
+  <conbody>
+    <p>This practical guide provides concrete, project-ready advice for technical writers collaborating with software engineers. Use this as a template to adapt to your organization's workflows.</p>
+    <section>
+      <title>Purpose</title>
+      <p>Create clear, developer-focused docs that ship with code, using the project's DITA templates and reuse patterns.</p>
+    </section>
+    <section>
+      <title>Structure & Files</title>
+      <p>Recommended topic types and roles:</p>
+      <ul>
+        <li><b>Concept</b> — Explain high-level ideas (use <code>topics/concepts/</code>).</li>
+        <li><b>Task</b> — Step-by-step procedures (use <code>topics/tasks/</code>).</li>
+        <li><b>Reference</b> — API, CLI flags, formats (use <code>topics/references/</code>).</li>
+      </ul>
+    </section>
+    <section>
+      <title>Documentation-as-Code Workflow</title>
+      <ol>
+        <li>Author topics in the repo near code (use feature branches and small PRs).</li>
+        <li>Use conrefs for shared warnings/notes and keyrefs for standards/terms.</li>
+        <li>Run local DITA builds (HTML & PDF) and attach artifacts to PRs.</li>
+        <li>Assign both a writer and an engineer as reviewers for each doc PR.</li>
+      </ol>
+    </section>
+    <section>
+      <title>Sample Content Conventions</title>
+      <ul>
+        <li>Use present tense and active voice for tasks.</li>
+        <li>Include minimal, copy-pasteable examples (shell, JSON, code snippets).</li>
+        <li>Prefer small, focused topics rather than monolithic docs.</li>
+      </ul>
+    </section>
+    <section>
+      <title>How to use this file as a template</title>
+      <p>Copy this topic to start new project guides, update the <code>Structure & Files</code> section with project-specific mappings, and add concrete examples from the codebase.</p>
+    </section>
+  </conbody>
+</concept>

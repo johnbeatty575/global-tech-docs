@@ -2,7 +2,25 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map id="service_manual">
   <title>Global Service Manual</title>
-  <topicref href="../topics/concepts/test.dita"/>
-  <topicref href="../topics/concepts/safety_notice.dita"/>
+
+  <!-- Learning / Examples (self-referential learning artifacts) -->
+  <topicref href="../topics/examples/self_referential/safety_notice.dita"/>
+  <topicref href="../topics/examples/self_referential/safety_notice_es.dita"/>
+  <topicref href="../topics/examples/self_referential/troubleshooting.dita"/>
+  <topicref href="../topics/examples/self_referential/installation.dita"/>
+  <topicref href="../topics/examples/self_referential/reuse_demo.dita"/>
+  <topicref href="../topics/examples/self_referential/self_referential_task_example.dita"/>
+
+  <!-- Reference topics -->
   <topicref href="../topics/references/diagnostic_api.dita"/>
+
+  <!-- Practical guides for real-world use -->
+  <topicref href="../topics/guides/technical_writer_guide.dita"/>
+  <topicref href="../topics/guides/onboarding_checklist.dita"/>
+  <topicref href="../topics/guides/api_documentation_template.dita"/>
+  <topicref href="../topics/guides/code_review_guidelines.dita"/>
+
+  <!-- Generated examples -->
+  <topicref href="../topics/examples/sample_api_from_openapi.dita"/>
+
 </map>

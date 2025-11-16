@@ -1,0 +1,63 @@
+name: DITA-OT Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Validate DITA map
+        run: |
+          ./dita-ot/bin/dita --validate --input=maps/service_manual.ditamap
+
+      - name: Build HTML5 output
+        run: |
+          ./dita-ot/bin/dita --input=maps/service_manual.ditamap --format=html5 --output=out/html5
+
+      - name: Set up Node.js (for accessibility checks)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install accessibility tools
+        run: |
+          npm install -g http-server pa11y
+
+      - name: Serve built HTML in background
+        run: |
+          nohup http-server ./out/html5 -p 8000 >/dev/null 2>&1 &
+          sleep 2
+
+      - name: Run accessibility check (pa11y)
+        run: |
+          pa11y http://localhost:8000/index.html --reporter cli
+        continue-on-error: false
+
+      - name: Build PDF output
+        run: |
+          ./dita-ot/bin/dita --input=maps/service_manual.ditamap --format=pdf --output=out/pdf
+
+      - name: Upload HTML5 output
+        uses: actions/upload-artifact@v4
+        with:
+          name: html5-docs
+          path: out/html5
+
+      - name: Upload PDF output
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-docs
+          path: out/pdf

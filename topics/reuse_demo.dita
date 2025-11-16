@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reuse_demo">
+  <title>How This Content Reuse Demo Maintains Itself: A Self-Referential DITA Concept</title>
+  <conbody>
+    <p>This topic explains how to demonstrate, update, and extend DITA content reuse, using itself as an example.</p>
+    <section>
+      <p><b>How to demonstrate reuse:</b> This topic pulls in a safety warning from another topic using <code>conref</code>. To change the reused content, update the source topic.</p>
+      <p conref="../concepts/safety_notice.dita#safety_notice/high_voltage_warning"/>
+    </section>
+    <section>
+      <p><b>How to demonstrate keyref usage:</b> Region-specific instructions can be referenced using <code>keyref</code> (see <code>battery_maintenance.dita</code> for an example).</p>
+    </section>
+    <section>
+      <p><b>How to update:</b> Edit the <code>conref</code> or <code>keyref</code> attributes above to point to new content as needed.</p>
+    </section>
+    <section>
+      <p><b>How to extend:</b> Add new sections showing other reuse mechanisms, such as <code>conkeyref</code> or <code>mapref</code>.</p>
+    </section>
+  </conbody>
+</concept>

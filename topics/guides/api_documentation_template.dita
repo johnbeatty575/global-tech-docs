@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="api_doc_template">
+  <title>API Documentation Template</title>
+  <refbody>
+    <section>
+      <p>Use this template for documenting HTTP endpoints, parameters, responses, and example requests.</p>
+      <table>
+        <tr><th>Field</th><th>Use</th></tr>
+        <tr><td>Endpoint</td><td>URL and method</td></tr>
+        <tr><td>Parameters</td><td>Query/path/header parameters</td></tr>
+        <tr><td>Response</td><td>JSON Schema or example</td></tr>
+        <tr><td>Examples</td><td>curl, JS fetch, or SDK snippets</td></tr>
+      </table>
+    </section>
+    <section>
+      <title>Example</title>
+      <codeblock outputclass="json">{
+  "endpoint": "/api/v1/example",
+  "method": "GET",
+  "parameters": [{"name":"id","in":"query","required":true}]
+}</codeblock>
+    </section>
+    <section>
+      <title>How to maintain</title>
+      <p>Keep examples runnable; prefer small, copyable snippets. Update response examples when APIs change and version guide sections when breaking changes occur.</p>
+    </section>
+  </refbody>
+</reference>

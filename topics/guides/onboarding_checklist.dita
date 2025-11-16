@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="onboarding_checklist">
+  <title>Onboarding Checklist: New Technical Writer</title>
+  <shortdesc>Practical checklist to onboard a new writer to the repository and build process.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Fork and clone the repo; verify you can run a local build.</cmd>
+        <info><codeblock>git clone https://github.com/johnbeatty575/global-tech-docs.git
+cd global-tech-docs
+./dita-ot/bin/dita --input=maps/service_manual.ditamap --format=html5 --output=out/html5</codeblock></info>
+      </step>
+      <step>
+        <cmd>Read the `technical_writer_guide.dita` to learn structure and conventions.</cmd>
+      </step>
+      <step>
+        <cmd>Find a small topic to edit (typo fix or example expansion) and open a PR with a brief description and reviewers.</cmd>
+      </step>
+      <step>
+        <cmd>Verify output and include screenshots or HTML snippets in the PR when relevant.</cmd>
+      </step>
+      <step>
+        <cmd>After merge, confirm CI artifacts (HTML/PDF) are uploaded to the PR by the workflow.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

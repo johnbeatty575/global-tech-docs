@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="code_review_guidelines">
+  <title>Documentation Code Review Guidelines</title>
+  <conbody>
+    <p>Guidelines for reviewing documentation changes that ship with code.</p>
+    <section>
+      <title>Checklist</title>
+      <ul>
+        <li>Does the change include runnable examples or clear steps?</li>
+        <li>Is the tone consistent with project conventions?</li>
+        <li>Are conrefs/keyrefs used for shared content instead of duplication?</li>
+        <li>Are outputs (HTML/PDF) attached to the PR or viewable via CI artifacts?</li>
+      </ul>
+    </section>
+    <section>
+      <title>Review Roles</title>
+      <p>Assign at least one technical writer and one engineer to each PR that touches documentation and code.</p>
+    </section>
+    <section>
+      <title>How to give feedback</title>
+      <p>Leave small, actionable comments. For large content redesigns, suggest a follow-up task rather than blocking a small bugfix PR.</p>
+    </section>
+  </conbody>
+</concept>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="safety_notice_es">
+  <title>Cómo este aviso de seguridad se mantiene a sí mismo: un concepto DITA autorreferencial</title>
+  <conbody>
+    <p>Este tema demuestra cómo crear y mantener un aviso de seguridad reutilizable en DITA, incluyendo cómo actualizarlo, reutilizarlo y ampliarlo.</p>
+    <note type="warning" id="high_voltage_warning">
+      <p>Desconecte siempre la alimentación antes de realizar el mantenimiento. Esta advertencia se referencia en otros temas usando <code>conref</code>.</p>
+    </note>
+    <section>
+      <p><b>Cómo reutilizar:</b> Referencie esta advertencia en otros temas usando el atributo <code>conref</code>, por ejemplo:</p>
+      <codeblock>&lt;step conref="../concepts/safety_notice_es.dita#safety_notice_es/high_voltage_warning"/&gt;</codeblock>
+    </section>
+    <section>
+      <p><b>Cómo actualizar:</b> Edite el texto dentro del elemento <code>note</code> anterior. Todos los temas que referencian esta advertencia recibirán la actualización automáticamente.</p>
+    </section>
+    <section>
+      <p><b>Cómo ampliar:</b> Agregue nuevos elementos <code>note</code> para advertencias adicionales y documente su uso aquí.</p>
+    </section>
+  </conbody>
+</concept>

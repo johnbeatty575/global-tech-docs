@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="troubleshooting">
+  <title>How This Troubleshooting Topic Maintains Itself: A Self-Referential DITA Concept</title>
+  <conbody>
+    <p>This topic explains how to structure, update, and extend a DITA troubleshooting topic, using itself as an example.</p>
+    <section>
+      <p><b>How to use:</b> This topic lists common troubleshooting steps for DITA builds. To add new issues, insert additional <code>&lt;li&gt;</code> elements below.</p>
+      <ul>
+        <li>Is Java 17+ installed and available in your PATH?</li>
+        <li>Are all required DITA-OT plugins installed?</li>
+        <li>On Unix, ensure <code>dita</code> is executable: <code>chmod +x ./dita-ot/bin/dita</code></li>
+        <li>Review the build log for missing files or invalid references.</li>
+      </ul>
+    </section>
+    <section>
+      <p><b>How to update:</b> Edit the troubleshooting steps above or add new <code>&lt;section&gt;</code> elements for advanced issues.</p>
+    </section>
+    <section>
+      <p><b>How to extend:</b> Add new troubleshooting categories as needed, and document their structure here.</p>
+    </section>
+    <section>
+      <p>For plugin issues, run:</p>
+      <codeblock>./dita-ot/bin/dita --install</codeblock>
+    </section>
+  </conbody>
+</concept>

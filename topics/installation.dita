@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installation">
+  <title>How This Installation Topic Maintains Itself: A Self-Referential DITA Task</title>
+  <shortdesc>This topic demonstrates how to create, structure, and maintain a DITA installation task, using itself as an example.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>Review the topic structure: This file uses the DITA <code>task</code> topic type, with <code>title</code>, <code>shortdesc</code>, and <code>taskbody</code> elements.</cmd>
+      </step>
+      <step>
+        <cmd>Follow the installation steps: Each <code>&lt;step&gt;</code> element describes a required action. To add new steps, insert additional <code>&lt;step&gt;</code> elements below.</cmd>
+        <info>
+          <p>Example:</p>
+          <codeblock>&lt;step&gt;&lt;cmd&gt;Install Java 17+ from &lt;xref href="https://adoptium.net/"/&gt;&lt;/cmd&gt;&lt;/step&gt;</codeblock>
+        </info>
+      </step>
+      <step>
+        <cmd>To update this topic: Edit the steps above to reflect new installation requirements or tools.</cmd>
+      </step>
+      <step>
+        <cmd>To extend this topic: Add new sections for advanced setup, troubleshooting, or platform-specific instructions.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

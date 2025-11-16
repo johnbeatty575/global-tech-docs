@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="working_with_engineers">
+  <title>How to Use Self-Referential Content: A Guide for Technical Writers Working with Software Engineers</title>
+  <conbody>
+    <p>This topic demonstrates how self-referential DITA content can be used as a living example and template for technical writers collaborating with software engineers.</p>
+    <section>
+      <title>Why Use Self-Referential Content?</title>
+      <p>Self-referential topics explain their own structure and maintenance, making onboarding and handoff easier for both writers and engineers. They serve as both documentation and meta-documentation.</p>
+    </section>
+    <section>
+      <title>Best Practices for Collaboration</title>
+      <ul>
+        <li>Use self-referential topics as templates for new documentation.</li>
+        <li>Encourage engineers to update the <code>how-to-update</code> and <code>how-to-extend</code> sections when making changes.</li>
+        <li>Document code samples and API references using DITA <code>reference</code> and <code>task</code> topics, linking to self-referential examples.</li>
+        <li>Use <code>conref</code> and <code>keyref</code> for shared warnings, standards, and terminology.</li>
+        <li>Validate all changes with the DITA-OT validator and review output in both HTML and PDF.</li>
+      </ul>
+    </section>
+    <section>
+      <title>Example Workflow</title>
+      <ol>
+        <li>Copy a self-referential topic as a starting point for new documentation.</li>
+        <li>Replace the instructional content with project-specific information, keeping the meta-sections updated.</li>
+        <li>Link to shared content (e.g., safety warnings) using <code>conref</code>.</li>
+        <li>Review with both technical writers and engineers to ensure clarity and accuracy.</li>
+      </ol>
+    </section>
+    <section>
+      <title>How to Update This Guide</title>
+      <p>Edit the sections above to reflect new best practices or lessons learned from real projects. Add new sections for advanced collaboration tips as needed.</p>
+    </section>
+  </conbody>
+</concept>

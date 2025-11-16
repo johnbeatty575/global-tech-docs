@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="sample_api_from_openapi">
+  <title>Sample API: Generated from openapi.yaml</title>
+  <refbody>
+    <section>
+      <p>This sample documents the WeatherBand API's `/forecast` endpoint from the repository-level <code>openapi.yaml</code>. It demonstrates how to convert OpenAPI endpoints into DITA reference topics.</p>
+    </section>
+    <section>
+      <title>Endpoint: GET /forecast</title>
+      <p>Base URL: <code>https://67ed51b04387d9117bbd31f6.mockapi.io/api/v1</code></p>
+      <p><b>Query Parameters</b></p>
+      <table>
+        <tr><th>Name</th><th>In</th><th>Required</th><th>Values</th><th>Description</th></tr>
+        <tr><td>location</td><td>query</td><td>Yes</td><td>Houston, Seattle</td><td>Case-sensitive city name</td></tr>
+      </table>
+      <p><b>Successful Response (200)</b></p>
+      <codeblock outputclass="json">{
+  "id": "1",
+  "location": "Houston",
+  "temp": 28,
+  "conditions": "humid",
+  "poetic_summary": "Sweltering heat wraps around the Bayou City like a thick blanket."
+}</codeblock>
+      <p><b>Examples</b></p>
+      <codeblock outputclass="bash">curl "https://67ed51b04387d9117bbd31f6.mockapi.io/api/v1/forecast?location=Seattle"</codeblock>
+      <codeblock outputclass="javascript">fetch('https://67ed51b04387d9117bbd31f6.mockapi.io/api/v1/forecast?location=Seattle')
+  .then(r => r.json()).then(console.log);</codeblock>
+    </section>
+    <section>
+      <title>How this was generated</title>
+      <p>For reproducibility, the OpenAPI spec is at the repo root (<code>openapi.yaml</code>). To generate DITA topics programmatically, use a small script to parse the OpenAPI file and emit DITA reference topics for each path.</p>
+    </section>
+  </refbody>
+</reference>
