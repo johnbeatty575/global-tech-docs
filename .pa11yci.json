@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "timeout": 30000,
+    "standard": "WCAG2AA"
+  },
+  "ignore": [
+    "notice-duplicate-id",
+    "color-contrast"
+  ]
+}

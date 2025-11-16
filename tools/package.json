@@ -1,0 +1,11 @@
+{
+  "name": "global-tech-docs-tools",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "generate-dita": "node generate-dita-from-openapi.js"
+  }
+}

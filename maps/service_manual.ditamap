@@ -21,6 +21,6 @@
   <topicref href="../topics/guides/code_review_guidelines.dita"/>
 
   <!-- Generated examples -->
-  <topicref href="../topics/examples/sample_api_from_openapi.dita"/>
+  <mapref href="generated_api.ditamap"/>
 
 </map>

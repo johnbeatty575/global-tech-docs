@@ -41,10 +41,41 @@ jobs:
           nohup http-server ./out/html5 -p 8000 >/dev/null 2>&1 &
           sleep 2
 
-      - name: Run accessibility check (pa11y)
+      - name: Run accessibility check (pa11y) and save reports
+        id: pa11y
         run: |
-          pa11y http://localhost:8000/index.html --reporter cli
-        continue-on-error: false
+          set -eux
+          # Run pa11y and write both JSON and HTML reports; capture exit code
+          pa11y http://localhost:8000/index.html --reporter json > pa11y-report.json || true
+          PA11Y_EXIT=$?
+          # Generate an HTML report for easier review
+          pa11y http://localhost:8000/index.html --reporter html > pa11y-report.html || true
+          echo $PA11Y_EXIT > pa11y-exit.txt
+
+      - name: Upload pa11y reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: pa11y-reports
+          path: |
+            pa11y-report.json
+            pa11y-report.html
+            pa11y-exit.txt
+
+      - name: Fail on accessibility issues
+        if: always()
+        run: |
+          if [ -f pa11y-exit.txt ]; then
+            EXIT=$(cat pa11y-exit.txt)
+            if [ "$EXIT" -ne 0 ]; then
+              echo "pa11y found issues (exit code $EXIT). See uploaded artifact 'pa11y-reports'."
+              exit $EXIT
+            else
+              echo "pa11y reports clean."
+            fi
+          else
+            echo "pa11y did not run or exit file missing; please check logs." 
+            exit 1
+          fi
 
       - name: Build PDF output
         run: |
