@@ -95,3 +95,9 @@ This path is intended to be the primary user-facing documentation; self-referent
 We now automatically publish the HTML output to GitHub Pages on pushes to `main`/`master` via CI. The workflow builds `out/html5` and deploys the result to the repository's Pages site using `peaceiris/actions-gh-pages`.
 
 If you'd rather preview locally, build HTML and open `out/html5/index.html` in a browser.
+
+## More documentation
+For a short architecture overview and developer instructions see:
+
+- `docs/ARCHITECTURE.md` — high-level architecture and where to find things.
+- `docs/DEVELOPER_GUIDE.md` — step-by-step local setup, build, accessibility and generator commands.

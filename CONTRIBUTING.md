@@ -31,6 +31,8 @@ Thank you for contributing! This document explains the minimal process we expect
 ./dita-ot/bin/dita --input=maps/service_manual.ditamap --format=html5 --output=out/html5
 ```
 
+See `docs/DEVELOPER_GUIDE.md` for step-by-step instructions (local server, accessibility checks, OpenAPI generator).
+
 ## Accessibility & QA
 - Confirm basic accessibility: headings, alt text for images, and color contrast where applicable.
 - If your change affects UI text samples, check on mobile viewports.
