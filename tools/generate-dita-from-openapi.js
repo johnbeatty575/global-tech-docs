@@ -4,12 +4,30 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 const repoRoot = path.resolve(__dirname, '..');
-const openapiPath = path.join(repoRoot, 'openapi.yaml');
+// Allow overriding the OpenAPI path via CLI arg or env var. Fall back to repo root,
+// then sibling WeatherBand-API-Docs repo if present (common local layout).
+const cliPath = process.argv[2];
+const envPath = process.env.OPENAPI_PATH;
+const candidatePaths = [];
+if (cliPath) candidatePaths.push(path.resolve(cliPath));
+if (envPath) candidatePaths.push(path.resolve(envPath));
+candidatePaths.push(path.join(repoRoot, 'openapi.yaml'));
+candidatePaths.push(path.join(repoRoot, '..', 'WeatherBand-API-Docs', 'openapi.yaml'));
+
+let openapiPath = null;
+for (const p of candidatePaths) {
+  if (fs.existsSync(p)) {
+    openapiPath = p;
+    break;
+  }
+}
 const outDir = path.join(repoRoot, 'topics', 'examples', 'generated_openapi');
 const mapsDir = path.join(repoRoot, 'maps');
 
-if (!fs.existsSync(openapiPath)) {
-  console.error('openapi.yaml not found at repo root.');
+if (!openapiPath) {
+  console.error('openapi.yaml not found. Tried the following paths:');
+  for (const p of candidatePaths) console.error('  -', p);
+  console.error('\nProvide the path as the first argument or set OPENAPI_PATH env var.');
   process.exit(1);
 }
 
