@@ -19,7 +19,7 @@
         <cmd>Notice content reuse: The safety warning is reused from <code>safety_notice.dita</code> using a <code>conref</code>. To update the warning, edit the source topic.</cmd>
         <info>
           <p>Example conref usage:</p>
-          <codeblock>&lt;step conref="../concepts/safety_notice.dita#safety_notice/high_voltage_warning"/&gt;</codeblock>
+          <codeblock>&lt;step conref="./safety_notice.dita#safety_notice/high_voltage_warning"/&gt;</codeblock>
         </info>
       </step>
       <step>
